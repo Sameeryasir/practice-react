@@ -36,7 +36,8 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-          <Logo />
+          {/* Hide header logo on mobile when drawer is open — drawer has its own logo */}
+          <Logo className={mobileOpen ? 'max-lg:hidden' : ''} />
 
           {/* Desktop nav */}
           <ul className="hidden items-center gap-1 lg:flex">
